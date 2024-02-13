@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EAFC24_Teamkits_Editor_WinForms.Locals {
+namespace EAFC24_Teamkits_Editor_WinForms {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace EAFC24_Teamkits_Editor_WinForms.Locals {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EAFC24_Teamkits_Editor_WinForms.Locals.Localization", typeof(Localization).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EAFC24_Teamkits_Editor_WinForms.Localization", typeof(Localization).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
