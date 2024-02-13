@@ -1,18 +1,25 @@
 ﻿using EAFC24_Teamkits_Editor_WinForms.Classes;
 using EAFC24_Teamkits_Editor_WinForms.Helpers;
+using EAFC24_Teamkits_Editor_WinForms.Properties;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Resources;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace EAFC24_Teamkits_Editor_WinForms
 {
@@ -25,86 +32,96 @@ namespace EAFC24_Teamkits_Editor_WinForms
         string[] file;
         int count = 0;
         List<Jersey> list = new List<Jersey>();
+        bool isfileopened = false;
+        ResourceManager res_man;    // declare Resource manager to access to specific cultureinfo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            file = File.ReadAllLines("newteamkits.txt");
-            foreach (string line in file)
+            DialogResult result = openFileDialog1.ShowDialog();
+
+            if (result == DialogResult.OK)
             {
-                if (count != 0)
-                    list.Add(new Jersey
-                    {
-                        chestbadge = Convert.ToInt32(line.Split('\t')[0]),
-                        shortsnumberplacementcode = Convert.ToInt32(line.Split('\t')[1]),
-                        shortsnumbercolorprimg = Convert.ToInt32(line.Split('\t')[2]),
-                        teamcolorsecb = Convert.ToInt32(line.Split('\t')[3]),
-                        shortsrenderingdetailmaptype = Convert.ToInt32(line.Split('\t')[4]),
-                        jerseyfrontnumberplacementcode = Convert.ToInt32(line.Split('\t')[5]),
-                        jerseynumbercolorsecr = Convert.ToInt32(line.Split('\t')[6]),
-                        jerseynumbercolorprimr = Convert.ToInt32(line.Split('\t')[7]),
-                        jerseynumbercolorprimg = Convert.ToInt32(line.Split('\t')[8]),
-                        shortsnumbercolorsecb = Convert.ToInt32(line.Split('\t')[9]),
-                        teamcolorprimg = Convert.ToInt32(line.Split('\t')[10]),
-                        shortsnumbercolorterb = Convert.ToInt32(line.Split('\t')[11]),
-                        shortsnumbercolorprimr = Convert.ToInt32(line.Split('\t')[12]),
-                        teamcolortertb = Convert.ToInt32(line.Split('\t')[13]),
-                        jerseynumbercolorterg = Convert.ToInt32(line.Split('\t')[14]),
-                        shortsnumbercolorprimb = Convert.ToInt32(line.Split('\t')[15]),
-                        jerseynamelayouttype = Convert.ToInt32(line.Split('\t')[16]),
-                        jerseynumbercolorterr = Convert.ToInt32(line.Split('\t')[17]),
-                        jerseyrightsleevebadge = Convert.ToInt32(line.Split('\t')[18]),
-                        jerseynumbercolorprimb = Convert.ToInt32(line.Split('\t')[19]),
-                        jerseyshapestyle = Convert.ToInt32(line.Split('\t')[20]),
-                        jerseybacknameplacementcode = Convert.ToInt32(line.Split('\t')[21]),
-                        teamcolorprimr = Convert.ToInt32(line.Split('\t')[22]),
-                        jerseynamecolorg = Convert.ToInt32(line.Split('\t')[23]),
-                        jerseyleftsleevebadge = Convert.ToInt32(line.Split('\t')[24]),
-                        teamcolorsecg = Convert.ToInt32(line.Split('\t')[25]),
-                        shortsnumbercolorsecg = Convert.ToInt32(line.Split('\t')[26]),
-                        teamcolortertr = Convert.ToInt32(line.Split('\t')[27]),
-                        jerseynumbercolorsecg = Convert.ToInt32(line.Split('\t')[28]),
-                        renderingmaterialtype = Convert.ToInt32(line.Split('\t')[29]),
-                        shortsnumbercolorterr = Convert.ToInt32(line.Split('\t')[30]),
-                        teamcolorsecr = Convert.ToInt32(line.Split('\t')[31]),
-                        jerseycollargeometrytype = Convert.ToInt32(line.Split('\t')[32]),
-                        shortsnumbercolorterg = Convert.ToInt32(line.Split('\t')[33]),
-                        jerseynamecolorr = Convert.ToInt32(line.Split('\t')[34]),
-                        teamcolorprimb = Convert.ToInt32(line.Split('\t')[35]),
-                        jerseyrenderingdetailmaptype = Convert.ToInt32(line.Split('\t')[36]),
-                        jerseynumbercolorsecb = Convert.ToInt32(line.Split('\t')[37]),
-                        jerseynamecolorb = Convert.ToInt32(line.Split('\t')[38]),
-                        jerseynumbercolorterb = Convert.ToInt32(line.Split('\t')[39]),
-                        teamcolortertg = Convert.ToInt32(line.Split('\t')[40]),
-                        shortsnumbercolorsecr = Convert.ToInt32(line.Split('\t')[41]),
-                        jerseybacknamefontcase = Convert.ToInt32(line.Split('\t')[42]),
-                        teamkittypetechid = Convert.ToInt32(line.Split('\t')[43]),
-                        powid = Convert.ToInt32(line.Split('\t')[44]),
-                        isinheritbasedetailmap = Convert.ToInt32(line.Split('\t')[45]),
-                        islocked = Convert.ToInt32(line.Split('\t')[46]),
-                        numberfonttype = Convert.ToInt32(line.Split('\t')[47]),
-                        jerseynamefonttype = Convert.ToInt32(line.Split('\t')[48]),
-                        teamkitid = Convert.ToInt32(line.Split('\t')[49]),
-                        teamcolorprimpercent = Convert.ToInt32(line.Split('\t')[50]),
-                        teamcolorsecpercent = Convert.ToInt32(line.Split('\t')[51]),
-                        year = Convert.ToInt32(line.Split('\t')[52]),
-                        captainarmband = Convert.ToInt32(line.Split('\t')[53]),
-                        teamtechid = Convert.ToInt32(line.Split('\t')[54]),
-                        isembargoed = Convert.ToInt32(line.Split('\t')[55]),
-                        hasadvertisingkit = Convert.ToInt32(line.Split('\t')[56]),
-                        dlc = Convert.ToInt32(line.Split('\t')[57]),
-                        teamcolortertpercent = Convert.ToInt32(line.Split('\t')[58]),
-                        armbandtype = Convert.ToInt32(line.Split('\t')[59]),
-                        shortsnumberfonttype = Convert.ToInt32(line.Split('\t')[60]),
-                        shortstyle = Convert.ToInt32(line.Split('\t')[61]),
-                        jerseyfit = Convert.ToInt32(line.Split('\t')[62]),
-                        jerseyrestriction = Convert.ToInt32(line.Split('\t')[63]),
+                //MessageBox.Show(openFileDialog1.FileName);
+                file = File.ReadAllLines(openFileDialog1.FileName);
+                foreach (string line in file)
+                {
+                    if (count != 0)
+                        list.Add(new Jersey
+                        {
+                            chestbadge = Convert.ToInt32(line.Split('\t')[0]),
+                            shortsnumberplacementcode = Convert.ToInt32(line.Split('\t')[1]),
+                            shortsnumbercolorprimg = Convert.ToInt32(line.Split('\t')[2]),
+                            teamcolorsecb = Convert.ToInt32(line.Split('\t')[3]),
+                            shortsrenderingdetailmaptype = Convert.ToInt32(line.Split('\t')[4]),
+                            jerseyfrontnumberplacementcode = Convert.ToInt32(line.Split('\t')[5]),
+                            jerseynumbercolorsecr = Convert.ToInt32(line.Split('\t')[6]),
+                            jerseynumbercolorprimr = Convert.ToInt32(line.Split('\t')[7]),
+                            jerseynumbercolorprimg = Convert.ToInt32(line.Split('\t')[8]),
+                            shortsnumbercolorsecb = Convert.ToInt32(line.Split('\t')[9]),
+                            teamcolorprimg = Convert.ToInt32(line.Split('\t')[10]),
+                            shortsnumbercolorterb = Convert.ToInt32(line.Split('\t')[11]),
+                            shortsnumbercolorprimr = Convert.ToInt32(line.Split('\t')[12]),
+                            teamcolortertb = Convert.ToInt32(line.Split('\t')[13]),
+                            jerseynumbercolorterg = Convert.ToInt32(line.Split('\t')[14]),
+                            shortsnumbercolorprimb = Convert.ToInt32(line.Split('\t')[15]),
+                            jerseynamelayouttype = Convert.ToInt32(line.Split('\t')[16]),
+                            jerseynumbercolorterr = Convert.ToInt32(line.Split('\t')[17]),
+                            jerseyrightsleevebadge = Convert.ToInt32(line.Split('\t')[18]),
+                            jerseynumbercolorprimb = Convert.ToInt32(line.Split('\t')[19]),
+                            jerseyshapestyle = Convert.ToInt32(line.Split('\t')[20]),
+                            jerseybacknameplacementcode = Convert.ToInt32(line.Split('\t')[21]),
+                            teamcolorprimr = Convert.ToInt32(line.Split('\t')[22]),
+                            jerseynamecolorg = Convert.ToInt32(line.Split('\t')[23]),
+                            jerseyleftsleevebadge = Convert.ToInt32(line.Split('\t')[24]),
+                            teamcolorsecg = Convert.ToInt32(line.Split('\t')[25]),
+                            shortsnumbercolorsecg = Convert.ToInt32(line.Split('\t')[26]),
+                            teamcolortertr = Convert.ToInt32(line.Split('\t')[27]),
+                            jerseynumbercolorsecg = Convert.ToInt32(line.Split('\t')[28]),
+                            renderingmaterialtype = Convert.ToInt32(line.Split('\t')[29]),
+                            shortsnumbercolorterr = Convert.ToInt32(line.Split('\t')[30]),
+                            teamcolorsecr = Convert.ToInt32(line.Split('\t')[31]),
+                            jerseycollargeometrytype = Convert.ToInt32(line.Split('\t')[32]),
+                            shortsnumbercolorterg = Convert.ToInt32(line.Split('\t')[33]),
+                            jerseynamecolorr = Convert.ToInt32(line.Split('\t')[34]),
+                            teamcolorprimb = Convert.ToInt32(line.Split('\t')[35]),
+                            jerseyrenderingdetailmaptype = Convert.ToInt32(line.Split('\t')[36]),
+                            jerseynumbercolorsecb = Convert.ToInt32(line.Split('\t')[37]),
+                            jerseynamecolorb = Convert.ToInt32(line.Split('\t')[38]),
+                            jerseynumbercolorterb = Convert.ToInt32(line.Split('\t')[39]),
+                            teamcolortertg = Convert.ToInt32(line.Split('\t')[40]),
+                            shortsnumbercolorsecr = Convert.ToInt32(line.Split('\t')[41]),
+                            jerseybacknamefontcase = Convert.ToInt32(line.Split('\t')[42]),
+                            teamkittypetechid = Convert.ToInt32(line.Split('\t')[43]),
+                            powid = Convert.ToInt32(line.Split('\t')[44]),
+                            isinheritbasedetailmap = Convert.ToInt32(line.Split('\t')[45]),
+                            islocked = Convert.ToInt32(line.Split('\t')[46]),
+                            numberfonttype = Convert.ToInt32(line.Split('\t')[47]),
+                            jerseynamefonttype = Convert.ToInt32(line.Split('\t')[48]),
+                            teamkitid = Convert.ToInt32(line.Split('\t')[49]),
+                            teamcolorprimpercent = Convert.ToInt32(line.Split('\t')[50]),
+                            teamcolorsecpercent = Convert.ToInt32(line.Split('\t')[51]),
+                            year = Convert.ToInt32(line.Split('\t')[52]),
+                            captainarmband = Convert.ToInt32(line.Split('\t')[53]),
+                            teamtechid = Convert.ToInt32(line.Split('\t')[54]),
+                            isembargoed = Convert.ToInt32(line.Split('\t')[55]),
+                            hasadvertisingkit = Convert.ToInt32(line.Split('\t')[56]),
+                            dlc = Convert.ToInt32(line.Split('\t')[57]),
+                            teamcolortertpercent = Convert.ToInt32(line.Split('\t')[58]),
+                            armbandtype = Convert.ToInt32(line.Split('\t')[59]),
+                            shortsnumberfonttype = Convert.ToInt32(line.Split('\t')[60]),
+                            shortstyle = Convert.ToInt32(line.Split('\t')[61]),
+                            jerseyfit = Convert.ToInt32(line.Split('\t')[62]),
+                            jerseyrestriction = Convert.ToInt32(line.Split('\t')[63]),
 
-                    });
-                count++;
+                        });
+                    count++;
+                }
+                listBox1.DataSource = list.GroupBy(x => x.teamtechid).Select(x => x.Key).ToArray();
+                listBox1.DisplayMember = "teamtechid";
+                isfileopened = true;
             }
-            listBox1.DataSource = list.GroupBy(x => x.teamtechid).Select(x => x.Key).ToArray();
-            listBox1.DisplayMember = "teamtechid";
-
+            else
+                MessageBox.Show("Lütfen dosya seçin", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -218,86 +235,90 @@ namespace EAFC24_Teamkits_Editor_WinForms
 
         private void button12_Click(object sender, EventArgs e)
         {
-            Jersey jersey = (Jersey)listBox2.SelectedItem;
-
-            list.Add(new Jersey
+            if (isfileopened)
             {
-                armbandtype = jersey.armbandtype,
-                captainarmband = jersey.captainarmband,
-                chestbadge = jersey.chestbadge,
-                dlc = jersey.dlc,
-                hasadvertisingkit = jersey.hasadvertisingkit,
-                isembargoed = jersey.isembargoed,
-                isinheritbasedetailmap = jersey.isinheritbasedetailmap,
-                islocked = jersey.islocked,
-                jerseybacknamefontcase = jersey.jerseybacknamefontcase,
-                jerseybacknameplacementcode = jersey.jerseybacknameplacementcode,
-                jerseycollargeometrytype = jersey.jerseycollargeometrytype,
-                jerseyfit = jersey.jerseyfit,
-                jerseyfrontnumberplacementcode = jersey.jerseyfrontnumberplacementcode,
-                jerseyleftsleevebadge = jersey.jerseyleftsleevebadge,
-                jerseynamecolorb = jersey.jerseynamecolorb,
-                jerseynamecolorg = jersey.jerseynamecolorg,
-                jerseynamecolorr = jersey.jerseynamecolorr,
-                jerseynamefonttype = jersey.jerseynamefonttype,
-                jerseynamelayouttype = jersey.jerseynamelayouttype,
-                jerseynumbercolorprimb = jersey.jerseynumbercolorprimb,
-                jerseynumbercolorprimg = jersey.jerseynumbercolorprimg,
-                jerseynumbercolorprimr = jersey.jerseynumbercolorprimr,
-                jerseynumbercolorsecb = jersey.jerseynumbercolorsecb,
-                jerseynumbercolorsecg = jersey.jerseynumbercolorsecg,
-                jerseynumbercolorsecr = jersey.jerseynumbercolorsecr,
-                jerseynumbercolorterb = jersey.jerseynumbercolorterb,
-                jerseynumbercolorterg = jersey.jerseynumbercolorterg,
-                jerseynumbercolorterr = jersey.jerseynumbercolorterr,
-                jerseyrenderingdetailmaptype = jersey.jerseyrenderingdetailmaptype,
-                jerseyrestriction = jersey.jerseyrestriction,
-                jerseyrightsleevebadge = jersey.jerseyrightsleevebadge,
-                jerseyshapestyle = jersey.jerseyshapestyle,
-                numberfonttype = jersey.numberfonttype,
-                powid = jersey.powid,
-                renderingmaterialtype = jersey.renderingmaterialtype,
-                shortsnumbercolorprimb = jersey.shortsnumbercolorprimb,
-                shortsnumbercolorprimg = jersey.shortsnumbercolorprimg,
-                shortsnumbercolorprimr = jersey.shortsnumbercolorprimr,
-                shortsnumbercolorsecb = jersey.shortsnumbercolorsecb,
-                shortsnumbercolorsecg = jersey.shortsnumbercolorsecg,
-                shortsnumbercolorsecr = jersey.shortsnumbercolorsecr,
-                shortsnumbercolorterb = jersey.shortsnumbercolorterb,
-                shortsnumbercolorterg = jersey.shortsnumbercolorterg,
-                shortsnumbercolorterr = jersey.shortsnumbercolorterr,
-                shortsnumberfonttype = jersey.shortsnumberfonttype,
-                shortsnumberplacementcode = jersey.shortsnumberplacementcode,
-                shortsrenderingdetailmaptype = jersey.shortsrenderingdetailmaptype,
-                shortstyle = jersey.shortstyle,
-                teamcolorprimb = jersey.teamcolorprimb,
-                teamcolorprimg = jersey.teamcolorprimg,
-                teamcolorprimpercent = jersey.teamcolorprimpercent,
-                teamcolorprimr = jersey.teamcolorprimr,
-                teamcolorsecb = jersey.teamcolorsecb,
-                teamcolorsecg = jersey.teamcolorsecg,
-                teamcolorsecpercent = jersey.teamcolorsecpercent,
-                teamcolorsecr = jersey.teamcolorsecr,
-                teamcolortertb = jersey.teamcolortertb,
-                teamcolortertg = jersey.teamcolortertg,
-                teamcolortertpercent = jersey.teamcolortertpercent,
-                teamcolortertr = jersey.teamcolortertr,
-                teamkitid = jersey.teamkitid,
-                teamkittypetechid = JerseyHelpers.FindLastJerseyByTeam(list, jersey.teamtechid) + 1,
-                teamtechid = jersey.teamtechid,
-                year = jersey.year
-            });
-            ShowKitOfTeams();
+                Jersey jersey = (Jersey)listBox2.SelectedItem;
 
+                list.Add(new Jersey
+                {
+                    armbandtype = jersey.armbandtype,
+                    captainarmband = jersey.captainarmband,
+                    chestbadge = jersey.chestbadge,
+                    dlc = jersey.dlc,
+                    hasadvertisingkit = jersey.hasadvertisingkit,
+                    isembargoed = jersey.isembargoed,
+                    isinheritbasedetailmap = jersey.isinheritbasedetailmap,
+                    islocked = jersey.islocked,
+                    jerseybacknamefontcase = jersey.jerseybacknamefontcase,
+                    jerseybacknameplacementcode = jersey.jerseybacknameplacementcode,
+                    jerseycollargeometrytype = jersey.jerseycollargeometrytype,
+                    jerseyfit = jersey.jerseyfit,
+                    jerseyfrontnumberplacementcode = jersey.jerseyfrontnumberplacementcode,
+                    jerseyleftsleevebadge = jersey.jerseyleftsleevebadge,
+                    jerseynamecolorb = jersey.jerseynamecolorb,
+                    jerseynamecolorg = jersey.jerseynamecolorg,
+                    jerseynamecolorr = jersey.jerseynamecolorr,
+                    jerseynamefonttype = jersey.jerseynamefonttype,
+                    jerseynamelayouttype = jersey.jerseynamelayouttype,
+                    jerseynumbercolorprimb = jersey.jerseynumbercolorprimb,
+                    jerseynumbercolorprimg = jersey.jerseynumbercolorprimg,
+                    jerseynumbercolorprimr = jersey.jerseynumbercolorprimr,
+                    jerseynumbercolorsecb = jersey.jerseynumbercolorsecb,
+                    jerseynumbercolorsecg = jersey.jerseynumbercolorsecg,
+                    jerseynumbercolorsecr = jersey.jerseynumbercolorsecr,
+                    jerseynumbercolorterb = jersey.jerseynumbercolorterb,
+                    jerseynumbercolorterg = jersey.jerseynumbercolorterg,
+                    jerseynumbercolorterr = jersey.jerseynumbercolorterr,
+                    jerseyrenderingdetailmaptype = jersey.jerseyrenderingdetailmaptype,
+                    jerseyrestriction = jersey.jerseyrestriction,
+                    jerseyrightsleevebadge = jersey.jerseyrightsleevebadge,
+                    jerseyshapestyle = jersey.jerseyshapestyle,
+                    numberfonttype = jersey.numberfonttype,
+                    powid = jersey.powid,
+                    renderingmaterialtype = jersey.renderingmaterialtype,
+                    shortsnumbercolorprimb = jersey.shortsnumbercolorprimb,
+                    shortsnumbercolorprimg = jersey.shortsnumbercolorprimg,
+                    shortsnumbercolorprimr = jersey.shortsnumbercolorprimr,
+                    shortsnumbercolorsecb = jersey.shortsnumbercolorsecb,
+                    shortsnumbercolorsecg = jersey.shortsnumbercolorsecg,
+                    shortsnumbercolorsecr = jersey.shortsnumbercolorsecr,
+                    shortsnumbercolorterb = jersey.shortsnumbercolorterb,
+                    shortsnumbercolorterg = jersey.shortsnumbercolorterg,
+                    shortsnumbercolorterr = jersey.shortsnumbercolorterr,
+                    shortsnumberfonttype = jersey.shortsnumberfonttype,
+                    shortsnumberplacementcode = jersey.shortsnumberplacementcode,
+                    shortsrenderingdetailmaptype = jersey.shortsrenderingdetailmaptype,
+                    shortstyle = jersey.shortstyle,
+                    teamcolorprimb = jersey.teamcolorprimb,
+                    teamcolorprimg = jersey.teamcolorprimg,
+                    teamcolorprimpercent = jersey.teamcolorprimpercent,
+                    teamcolorprimr = jersey.teamcolorprimr,
+                    teamcolorsecb = jersey.teamcolorsecb,
+                    teamcolorsecg = jersey.teamcolorsecg,
+                    teamcolorsecpercent = jersey.teamcolorsecpercent,
+                    teamcolorsecr = jersey.teamcolorsecr,
+                    teamcolortertb = jersey.teamcolortertb,
+                    teamcolortertg = jersey.teamcolortertg,
+                    teamcolortertpercent = jersey.teamcolortertpercent,
+                    teamcolortertr = jersey.teamcolortertr,
+                    teamkitid = jersey.teamkitid,
+                    teamkittypetechid = JerseyHelpers.FindLastJerseyByTeam(list, jersey.teamtechid) + 1,
+                    teamtechid = jersey.teamtechid,
+                    year = jersey.year
+                });
+                ShowKitOfTeams();
+            }
+            else
+                MessageBox.Show("Lütfen teamkits dosyası açın", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
 
         }
         private void textBoxesChanges(object sender, EventArgs e)
         {
-           
 
-            
+
+
 
         }
 
@@ -306,13 +327,29 @@ namespace EAFC24_Teamkits_Editor_WinForms
 
         }
 
-      
+
         private void button14_Click_1(object sender, EventArgs e)
         {
-            List<Jersey> newlist = list.Where(x=>x.teamkitid!=0).ToList();
-            
-            string tsvString = newlist.ToDelimitedText<Jersey>('\t', true, false);
-            File.WriteAllText("newteamkits.txt", tsvString,Encoding.Unicode);
+            if (isfileopened)
+            {
+
+                List<Jersey> newlist = list.Where(x => x.teamkitid != 0).ToList();
+
+                string tsvString = newlist.ToDelimitedText<Jersey>('\t', true, false);
+                saveFileDialog1.Filter = "Text Dosyaları (*.txt)|*.txt";
+                DialogResult result = saveFileDialog1.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    File.WriteAllText(saveFileDialog1.FileName, tsvString, Encoding.Unicode);
+
+                }
+                else
+                    MessageBox.Show("Lütfen isim girin", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+            }else
+                MessageBox.Show("Lütfen teamkits dosyası açın", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -661,8 +698,98 @@ namespace EAFC24_Teamkits_Editor_WinForms
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            listBox1.DataSource = list.Where(z=>z.teamtechid.ToString().Contains(textBox1.Text)).GroupBy(x => x.teamtechid).Select(x => x.Key).ToArray();
+            listBox1.DataSource = list.Where(z => z.teamtechid.ToString().Contains(textBox1.Text)).GroupBy(x => x.teamtechid).Select(x => x.Key).ToArray();
             listBox1.DisplayMember = "teamtechid";
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Localization.Culture = CultureInfo.GetCultureInfo("tr");
+            Properties.Settings.Default["lang"] = "tr";
+            Properties.Settings.Default.Save();
+
+        }
+
+        private void englishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Localization.Culture = CultureInfo.GetCultureInfo("en-US");
+
+            Properties.Settings.Default["lang"] = "en-US";
+            Properties.Settings.Default.Save();
+
+        }
+
+        private void russianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Localization.Culture = CultureInfo.GetCultureInfo("ru-RU");
+            Properties.Settings.Default["lang"] = "ru-RU";
+            Properties.Settings.Default.Save();
+
+        }
+        public void Apply()
+        {
+            label1.Text = Localization.jerseycollargeometrytype;
+            label2.Text = Localization.captainarmband;
+            label3.Text = Localization.Color_1_;
+            label4.Text = Localization.Color_1_+"%";
+            label6.Text = Localization.Color_2_;
+            label5.Text = Localization.Color_2_ + "%";
+            label8.Text = Localization.Color_3_;
+            label7.Text = Localization.Color_3_ + "%";
+            label9.Text = Localization.jerseyleftsleevebadge;
+            label10.Text = Localization.jerseyrightsleevebadge;
+            label11.Text = Localization.jerseyshapestyle;
+            label12.Text = Localization.shortstyle;
+            label24.Text = Localization.jerseynamefonttype;
+            label22.Text = Localization.Color_1_;
+            label21.Text = Localization.jerseynamelayouttype;
+            label19.Text = Localization.jerseybacknamefontcase;
+            label15.Text = Localization.jerseybacknameplacementcode;
+            label18.Text = Localization.numberfonttype;
+            label17.Text = Localization.Color_1_;
+            label14.Text = Localization.Color_2_;
+            label16.Text = Localization.Color_3_;
+            label13.Text = Localization.jerseyfrontnumberplacementcode;
+
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void button13_Click_1(object sender, EventArgs e)
+        {
+           
+
+            
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    Localization.Culture = CultureInfo.GetCultureInfo("tr");
+                    Properties.Settings.Default["lang"] = "tr";
+                    Properties.Settings.Default.Save();
+                    break;
+                    case 1:
+                    Localization.Culture = CultureInfo.GetCultureInfo("en-US");
+                    Properties.Settings.Default["lang"] = "en-US";
+                    Properties.Settings.Default.Save();
+                    break;
+                    case 2:
+                    Localization.Culture = CultureInfo.GetCultureInfo("ru-RU");
+                    Properties.Settings.Default["lang"] = "ru-RU";
+                    Properties.Settings.Default.Save();
+                    break;
+            }
+            Apply();
+          
+
+
         }
     }
 }

@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="armbandtype" xml:space="preserve">
+    <value>типбандажа</value>
+  </data>
+  <data name="captainarmband" xml:space="preserve">
+    <value>повязка на руку</value>
+  </data>
+  <data name="chestbadge" xml:space="preserve">
+    <value>значокнагруди</value>
+  </data>
+  <data name="Color(1)" xml:space="preserve">
+    <value>Цвет(1)</value>
+  </data>
+  <data name="Color(2)" xml:space="preserve">
+    <value>Цвет(2)</value>
+  </data>
+  <data name="Color(3)" xml:space="preserve">
+    <value>Цвет(3)</value>
+  </data>
+  <data name="dlc" xml:space="preserve">
+    <value>дополнение</value>
+  </data>
+  <data name="hasadvertisingkit" xml:space="preserve">
+    <value>имеетрекламныйкомплект</value>
+  </data>
+  <data name="isembargoed" xml:space="preserve">
+    <value>запрещено</value>
+  </data>
+  <data name="isinheritbasedetailmap" xml:space="preserve">
+    <value>унаследованакартадеталейосновы</value>
+  </data>
+  <data name="islocked" xml:space="preserve">
+    <value>заблокирован</value>
+  </data>
+  <data name="jerseybacknamefontcase" xml:space="preserve">
+    <value>чехол для шрифта</value>
+  </data>
+  <data name="jerseybacknameplacementcode" xml:space="preserve">
+    <value>видимость</value>
+  </data>
+  <data name="jerseycollargeometrytype" xml:space="preserve">
+    <value>Воротник</value>
+  </data>
+  <data name="jerseyfit" xml:space="preserve">
+    <value>подходитфутболка</value>
+  </data>
+  <data name="jerseyfrontnumberplacementcode" xml:space="preserve">
+    <value>номер сундука</value>
+  </data>
+  <data name="jerseyleftsleevebadge" xml:space="preserve">
+    <value>Значок на левом рукаве</value>
+  </data>
+  <data name="jerseynamecolorb" xml:space="preserve">
+    <value>цветимениbфутболки</value>
+  </data>
+  <data name="jerseynamecolorg" xml:space="preserve">
+    <value>цветимениgфутболки</value>
+  </data>
+  <data name="jerseynamecolorr" xml:space="preserve">
+    <value>цветимениrфутболки</value>
+  </data>
+  <data name="jerseynamefonttype" xml:space="preserve">
+    <value>Шрифт</value>
+  </data>
+  <data name="jerseynamelayouttype" xml:space="preserve">
+    <value>макет</value>
+  </data>
+  <data name="jerseynumbercolorprimb" xml:space="preserve">
+    <value>основнойцветномерbфутболки</value>
+  </data>
+  <data name="jerseynumbercolorprimg" xml:space="preserve">
+    <value>основнойцветномерgфутболки</value>
+  </data>
+  <data name="jerseynumbercolorprimr" xml:space="preserve">
+    <value>основнойцветномерrфутболки</value>
+  </data>
+  <data name="jerseynumbercolorsecb" xml:space="preserve">
+    <value>вторичныйцветномерbфутболки</value>
+  </data>
+  <data name="jerseynumbercolorsecg" xml:space="preserve">
+    <value>вторичныйцветномерgфутболки</value>
+  </data>
+  <data name="jerseynumbercolorsecr" xml:space="preserve">
+    <value>вторичныйцветномерrфутболки</value>
+  </data>
+  <data name="jerseynumbercolorterb" xml:space="preserve">
+    <value>терциарныйцветномерbфутболки</value>
+  </data>
+  <data name="jerseynumbercolorterg" xml:space="preserve">
+    <value>терциарныйцветномерgфутболки</value>
+  </data>
+  <data name="jerseynumbercolorterr" xml:space="preserve">
+    <value>терциарныйцветномерrфутболки</value>
+  </data>
+  <data name="jerseyrenderingdetailmaptype" xml:space="preserve">
+    <value>типкартыдеталейрендерингафутболки</value>
+  </data>
+  <data name="jerseyrestriction" xml:space="preserve">
+    <value>ограничениеназначенияфутболки</value>
+  </data>
+  <data name="jerseyrightsleevebadge" xml:space="preserve">
+    <value>Значок на правом рукаве</value>
+  </data>
+  <data name="jerseyshapestyle" xml:space="preserve">
+    <value>Стиль формы</value>
+  </data>
+  <data name="numberfonttype" xml:space="preserve">
+    <value>Шрифт</value>
+  </data>
+  <data name="powid" xml:space="preserve">
+    <value>идентификаторPOW</value>
+  </data>
+  <data name="renderingmaterialtype" xml:space="preserve">
+    <value>типматериалаотображения</value>
+  </data>
+  <data name="shortsnumbercolorprimb" xml:space="preserve">
+    <value>основнойцветномерbшорт</value>
+  </data>
+  <data name="shortsnumbercolorprimg" xml:space="preserve">
+    <value>основнойцветномерgшорт</value>
+  </data>
+  <data name="shortsnumbercolorprimr" xml:space="preserve">
+    <value>основнойцветномерrшорт</value>
+  </data>
+  <data name="shortsnumbercolorsecb" xml:space="preserve">
+    <value>вторичныйцветномерbшорт</value>
+  </data>
+  <data name="shortsnumbercolorsecg" xml:space="preserve">
+    <value>вторичныйцветномерgшорт</value>
+  </data>
+  <data name="shortsnumbercolorsecr" xml:space="preserve">
+    <value>вторичныйцветномерrшорт</value>
+  </data>
+  <data name="shortsnumbercolorterb" xml:space="preserve">
+    <value>терциарныйцветномерbшорт</value>
+  </data>
+  <data name="shortsnumbercolorterg" xml:space="preserve">
+    <value>терциарныйцветномерgшорт</value>
+  </data>
+  <data name="shortsnumbercolorterr" xml:space="preserve">
+    <value>терциарныйцветномерrшорт</value>
+  </data>
+  <data name="shortsnumberfonttype" xml:space="preserve">
+    <value>Шрифт</value>
+  </data>
+  <data name="shortsnumberplacementcode" xml:space="preserve">
+    <value>кодместоположенияномерашорт</value>
+  </data>
+  <data name="shortsrenderingdetailmaptype" xml:space="preserve">
+    <value>типкартыдеталейотображенияшорт</value>
+  </data>
+  <data name="shortstyle" xml:space="preserve">
+    <value>Стиль Шорт</value>
+  </data>
+  <data name="teamcolorprimb" xml:space="preserve">
+    <value>основнойцветкомандыb</value>
+  </data>
+  <data name="teamcolorprimg" xml:space="preserve">
+    <value>основнойцветкомандыg</value>
+  </data>
+  <data name="teamcolorprimpercent" xml:space="preserve">
+    <value>процентосновногоцветакоманды</value>
+  </data>
+  <data name="teamcolorprimr" xml:space="preserve">
+    <value>основнойцветкомандыr</value>
+  </data>
+  <data name="teamcolorsecb" xml:space="preserve">
+    <value>вторичныйцветкомандыb</value>
+  </data>
+  <data name="teamcolorsecg" xml:space="preserve">
+    <value>вторичныйцветкомандыg</value>
+  </data>
+  <data name="teamcolorsecpercent" xml:space="preserve">
+    <value>процентвторичногоцветакоманды</value>
+  </data>
+  <data name="teamcolorsecr" xml:space="preserve">
+    <value>вторичныйцветкомандыr</value>
+  </data>
+  <data name="teamcolortertb" xml:space="preserve">
+    <value>терциарныйцветкомандыb</value>
+  </data>
+  <data name="teamcolortertg" xml:space="preserve">
+    <value>терциарныйцветкомандыg</value>
+  </data>
+  <data name="teamcolortertpercent" xml:space="preserve">
+    <value>проценттерциарногоцветакоманды</value>
+  </data>
+  <data name="teamcolortertr" xml:space="preserve">
+    <value>терциарныйцветкомандыr</value>
+  </data>
+  <data name="teamkitid" xml:space="preserve">
+    <value>идентификаторкомплектакоманды</value>
+  </data>
+  <data name="teamkittypetechid" xml:space="preserve">
+    <value>идентификатортехкомплектакоманды</value>
+  </data>
+  <data name="teamtechid" xml:space="preserve">
+    <value>идентификатортехкоманды</value>
+  </data>
+  <data name="year" xml:space="preserve">
+    <value>год</value>
+  </data>
+</root>
