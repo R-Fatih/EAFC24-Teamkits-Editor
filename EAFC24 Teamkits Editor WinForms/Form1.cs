@@ -28,7 +28,7 @@ namespace EAFC24_Teamkits_Editor_WinForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            file = File.ReadAllLines("teamkits.txt");
+            file = File.ReadAllLines("newteamkits.txt");
             foreach (string line in file)
             {
                 if (count != 0)
@@ -150,8 +150,8 @@ namespace EAFC24_Teamkits_Editor_WinForms
             Color backname = Color.FromArgb(jersey.jerseynamecolorr, jersey.jerseynamecolorg, jersey.jerseynamecolorb);
             textBox15.Text = ColorTranslator.ToHtml(backname);
             button5.BackColor = backname;
-            textBox16.Text = jersey.jerseybacknamefontcase.ToString();
-            textBox17.Text = jersey.jerseynamelayouttype.ToString();
+            textBox16.Text = jersey.jerseynamelayouttype.ToString();
+            textBox17.Text = jersey.jerseybacknamefontcase.ToString();
             textBox18.Text = jersey.jerseybacknameplacementcode.ToString();
             #endregion
 
@@ -307,115 +307,362 @@ namespace EAFC24_Teamkits_Editor_WinForms
         }
 
       
-
-
-        private void textBox13_TextChanged(object sender, EventArgs e)
-        {
-            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
-            jersey.jerseycollargeometrytype = Convert.ToInt32(textBox2.Text);
-            jersey.captainarmband = Convert.ToInt32(textBox3.Text);
-            Color teamcolor1 = ColorTranslator.FromHtml(textBox4.Text);
-            jersey.teamcolorprimr = teamcolor1.R;
-            jersey.teamcolorprimg = teamcolor1.G;
-            jersey.teamcolorprimb = teamcolor1.B;
-
-
-            jersey.teamcolorprimpercent = Convert.ToInt32(textBox5.Text);
-            Color teamcolor2 = ColorTranslator.FromHtml(textBox7.Text);
-
-            jersey.teamcolorsecr = teamcolor2.R;
-            jersey.teamcolorsecg = teamcolor2.G;
-            jersey.teamcolorsecb = teamcolor2.B;
-            jersey.teamcolorsecpercent = Convert.ToInt32(textBox6.Text);
-
-            Color teamcolor3 = ColorTranslator.FromHtml(textBox9.Text);
-
-
-            jersey.teamcolortertr = teamcolor3.R;
-            jersey.teamcolortertg = teamcolor3.G;
-            jersey.teamcolortertb = teamcolor3.B;
-
-
-            jersey.teamcolortertpercent = Convert.ToInt32(textBox8.Text);
-            jersey.jerseyleftsleevebadge = Convert.ToInt32(textBox10.Text);
-            jersey.jerseyrightsleevebadge = Convert.ToInt32(textBox11.Text);
-            jersey.jerseyshapestyle = Convert.ToInt32(textBox12.Text);
-            jersey.shortstyle = Convert.ToInt32(textBox13.Text);
-
-            jersey.jerseynamefonttype = Convert.ToInt32(textBox14.Text);
-            Color backname = ColorTranslator.FromHtml(textBox15.Text);
-            jersey.jerseynamecolorr = backname.R;
-            jersey.jerseynamecolorg = backname.G;
-            jersey.jerseynamecolorb = backname.B;
-
-
-            jersey.jerseybacknamefontcase = Convert.ToInt32(textBox16.Text);
-            jersey.jerseynamelayouttype = Convert.ToInt32(textBox17.Text);
-            jersey.jerseybacknameplacementcode = Convert.ToInt32(textBox18.Text);
-
-            jersey.numberfonttype = Convert.ToInt32(textBox23.Text);
-            Color jerseyback1 = ColorTranslator.FromHtml(textBox22.Text);
-            jersey.jerseynumbercolorprimr = jerseyback1.R;
-            jersey.jerseynumbercolorprimg = jerseyback1.G;
-            jersey.jerseynumbercolorprimb = jerseyback1.B;
-            Color jerseyback2 = ColorTranslator.FromHtml(textBox20.Text);
-            jersey.jerseynumbercolorsecr = jerseyback2.R;
-            jersey.jerseynumbercolorsecg = jerseyback2.G;
-            jersey.jerseynumbercolorsecb = jerseyback2.B;
-            Color jerseyback3 = ColorTranslator.FromHtml(textBox21.Text);
-            jersey.jerseynumbercolorterr = jerseyback3.R;
-            jersey.jerseynumbercolorterg = jerseyback3.G;
-            jersey.jerseynumbercolorterb = jerseyback3.B;
-
-
-
-            jersey.jerseyfrontnumberplacementcode = Convert.ToInt32(textBox19.Text);
-
-            jersey.shortsnumberfonttype = Convert.ToInt32(textBox28.Text);
-
-
-            Color numberback1 = ColorTranslator.FromHtml(textBox27.Text);
-            jersey.shortsnumbercolorprimr = numberback1.R;
-            jersey.shortsnumbercolorprimg = numberback1.G;
-            jersey.shortsnumbercolorprimb = numberback1.B;
-            Color numberback2 = ColorTranslator.FromHtml(textBox25.Text);
-            jersey.shortsnumbercolorsecr = numberback2.R;
-            jersey.shortsnumbercolorsecg = numberback2.G;
-            jersey.shortsnumbercolorsecb = numberback2.B;
-            Color numberback3 = ColorTranslator.FromHtml(textBox24.Text);
-            jersey.shortsnumbercolorterr = numberback3.R;
-            jersey.shortsnumbercolorterg = numberback3.G;
-            jersey.shortsnumbercolorterb = numberback3.B;
-
-
-
-            jersey.shortsnumberplacementcode = Convert.ToInt32(textBox26.Text);
-
-            jersey.armbandtype = Convert.ToInt32(textBox40.Text);
-            jersey.chestbadge = Convert.ToInt32(textBox39.Text);
-            jersey.dlc = Convert.ToInt32(textBox38.Text);
-            jersey.hasadvertisingkit = Convert.ToInt32(textBox37.Text);
-            jersey.isembargoed = Convert.ToInt32(textBox36.Text);
-            jersey.isinheritbasedetailmap = Convert.ToInt32(textBox35.Text);
-            jersey.islocked = Convert.ToInt32(textBox34.Text);
-            jersey.jerseyfit = Convert.ToInt32(textBox33.Text);
-            jersey.jerseyrenderingdetailmaptype = Convert.ToInt32(textBox32.Text);
-            jersey.jerseyrestriction = Convert.ToInt32(textBox31.Text);
-            jersey.powid = Convert.ToInt32(textBox30.Text);
-            jersey.renderingmaterialtype = Convert.ToInt32(textBox29.Text);
-            jersey.shortsrenderingdetailmaptype = Convert.ToInt32(textBox41.Text);
-            jersey.teamkitid = Convert.ToInt32(textBox42.Text);
-            jersey.teamkittypetechid = Convert.ToInt32(textBox43.Text);
-            jersey.teamtechid = Convert.ToInt32(textBox44.Text);
-            jersey.year = Convert.ToInt32(textBox45.Text);
-        }
-
         private void button14_Click_1(object sender, EventArgs e)
         {
             List<Jersey> newlist = list.Where(x=>x.teamkitid!=0).ToList();
             
             string tsvString = newlist.ToDelimitedText<Jersey>('\t', true, false);
             File.WriteAllText("newteamkits.txt", tsvString,Encoding.Unicode);
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.jerseycollargeometrytype = Convert.ToInt32(textBox2.Text);
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.captainarmband = Convert.ToInt32(textBox3.Text);
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            Color teamcolor1 = ColorTranslator.FromHtml(textBox4.Text);
+            jersey.teamcolorprimr = teamcolor1.R;
+            jersey.teamcolorprimg = teamcolor1.G;
+            jersey.teamcolorprimb = teamcolor1.B;
+            button2.BackColor = teamcolor1;
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.teamcolorprimpercent = Convert.ToInt32(textBox5.Text);
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            Color teamcolor2 = ColorTranslator.FromHtml(textBox7.Text);
+
+            jersey.teamcolorsecr = teamcolor2.R;
+            jersey.teamcolorsecg = teamcolor2.G;
+            jersey.teamcolorsecb = teamcolor2.B;
+            button3.BackColor = teamcolor2;
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.teamcolorsecpercent = Convert.ToInt32(textBox6.Text);
+
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            Color teamcolor3 = ColorTranslator.FromHtml(textBox9.Text);
+
+            jersey.teamcolortertr = teamcolor3.R;
+            jersey.teamcolortertg = teamcolor3.G;
+            jersey.teamcolortertb = teamcolor3.B;
+            button4.BackColor = teamcolor3;
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.teamcolortertpercent = Convert.ToInt32(textBox8.Text);
+
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.jerseyleftsleevebadge = Convert.ToInt32(textBox10.Text);
+
+        }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.jerseyrightsleevebadge = Convert.ToInt32(textBox11.Text);
+
+        }
+
+        private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.jerseyshapestyle = Convert.ToInt32(textBox12.Text);
+
+        }
+
+        private void textBox13_TextChanged_1(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.shortstyle = Convert.ToInt32(textBox13.Text);
+
+        }
+
+        private void textBox14_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.jerseynamefonttype = Convert.ToInt32(textBox14.Text);
+
+        }
+
+        private void textBox15_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            Color backname = ColorTranslator.FromHtml(textBox15.Text);
+            jersey.jerseynamecolorr = backname.R;
+            jersey.jerseynamecolorg = backname.G;
+            jersey.jerseynamecolorb = backname.B;
+            button5.BackColor = backname;
+        }
+
+        private void textBox16_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.jerseynamelayouttype = Convert.ToInt32(textBox16.Text);
+
+        }
+
+        private void textBox17_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.jerseybacknamefontcase = Convert.ToInt32(textBox17.Text);
+
+        }
+
+        private void textBox18_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.jerseybacknameplacementcode = Convert.ToInt32(textBox18.Text);
+
+        }
+
+        private void textBox23_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.numberfonttype = Convert.ToInt32(textBox23.Text);
+
+        }
+
+        private void textBox22_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            Color jerseyback1 = ColorTranslator.FromHtml(textBox22.Text);
+            jersey.jerseynumbercolorprimr = jerseyback1.R;
+            jersey.jerseynumbercolorprimg = jerseyback1.G;
+            jersey.jerseynumbercolorprimb = jerseyback1.B;
+            button6.BackColor = jerseyback1;
+
+        }
+
+        private void textBox20_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            Color jerseyback2 = ColorTranslator.FromHtml(textBox20.Text);
+            jersey.jerseynumbercolorsecr = jerseyback2.R;
+            jersey.jerseynumbercolorsecg = jerseyback2.G;
+            jersey.jerseynumbercolorsecb = jerseyback2.B;
+            button7.BackColor = jerseyback2;
+
+        }
+
+        private void textBox21_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            Color jerseyback3 = ColorTranslator.FromHtml(textBox21.Text);
+            jersey.jerseynumbercolorterr = jerseyback3.R;
+            jersey.jerseynumbercolorterg = jerseyback3.G;
+            jersey.jerseynumbercolorterb = jerseyback3.B;
+            button8.BackColor = jerseyback3;
+
+        }
+
+        private void textBox19_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.jerseyfrontnumberplacementcode = Convert.ToInt32(textBox19.Text);
+
+        }
+
+        private void textBox28_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.shortsnumberfonttype = Convert.ToInt32(textBox28.Text);
+
+        }
+
+        private void textBox27_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            Color numberback1 = ColorTranslator.FromHtml(textBox27.Text);
+            jersey.shortsnumbercolorprimr = numberback1.R;
+            jersey.shortsnumbercolorprimg = numberback1.G;
+            jersey.shortsnumbercolorprimb = numberback1.B;
+            button11.BackColor = numberback1;
+
+        }
+
+        private void textBox25_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            Color numberback2 = ColorTranslator.FromHtml(textBox25.Text);
+            jersey.shortsnumbercolorsecr = numberback2.R;
+            jersey.shortsnumbercolorsecg = numberback2.G;
+            jersey.shortsnumbercolorsecb = numberback2.B;
+            button10.BackColor = numberback2;
+
+        }
+
+        private void textBox24_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            Color numberback3 = ColorTranslator.FromHtml(textBox24.Text);
+            jersey.shortsnumbercolorterr = numberback3.R;
+            jersey.shortsnumbercolorterg = numberback3.G;
+            jersey.shortsnumbercolorterb = numberback3.B;
+            button9.BackColor = numberback3;
+
+        }
+
+        private void textBox26_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.shortsnumberplacementcode = Convert.ToInt32(textBox26.Text);
+
+        }
+
+        private void textBox40_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.armbandtype = Convert.ToInt32(textBox40.Text);
+
+        }
+
+        private void textBox39_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.chestbadge = Convert.ToInt32(textBox39.Text);
+
+        }
+
+        private void textBox38_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.dlc = Convert.ToInt32(textBox38.Text);
+
+        }
+
+        private void textBox37_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.hasadvertisingkit = Convert.ToInt32(textBox37.Text);
+
+        }
+
+        private void textBox36_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.isembargoed = Convert.ToInt32(textBox36.Text);
+
+        }
+
+        private void textBox35_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.isinheritbasedetailmap = Convert.ToInt32(textBox35.Text);
+
+        }
+
+        private void textBox34_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.islocked = Convert.ToInt32(textBox34.Text);
+
+        }
+
+        private void textBox33_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.jerseyfit = Convert.ToInt32(textBox33.Text);
+
+        }
+
+        private void textBox32_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.jerseyrenderingdetailmaptype = Convert.ToInt32(textBox32.Text);
+
+        }
+
+        private void textBox31_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.jerseyrestriction = Convert.ToInt32(textBox31.Text);
+
+        }
+
+        private void textBox30_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.powid = Convert.ToInt32(textBox30.Text);
+
+        }
+
+        private void textBox29_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.renderingmaterialtype = Convert.ToInt32(textBox29.Text);
+
+        }
+
+        private void textBox41_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.shortsrenderingdetailmaptype = Convert.ToInt32(textBox41.Text);
+
+        }
+
+        private void textBox42_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.teamkitid = Convert.ToInt32(textBox42.Text);
+
+        }
+
+        private void textBox43_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.teamkittypetechid = Convert.ToInt32(textBox43.Text);
+
+        }
+
+        private void textBox44_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.teamtechid = Convert.ToInt32(textBox44.Text);
+
+        }
+
+        private void textBox45_TextChanged(object sender, EventArgs e)
+        {
+            Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
+            jersey.year = Convert.ToInt32(textBox45.Text);
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            listBox1.DataSource = list.Where(z=>z.teamtechid.ToString().Contains(textBox1.Text)).GroupBy(x => x.teamtechid).Select(x => x.Key).ToArray();
+            listBox1.DisplayMember = "teamtechid";
         }
     }
 }
