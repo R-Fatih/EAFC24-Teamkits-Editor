@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EAFC24 Teamkits Editor WinForms", "EAFC24 Teamkits Editor WinForms\EAFC24 Teamkits Editor WinForms.csproj", "{CABF63DB-1DF4-43C1-802E-6480ED1B9387}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CABF63DB-1DF4-43C1-802E-6480ED1B9387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CABF63DB-1DF4-43C1-802E-6480ED1B9387}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CABF63DB-1DF4-43C1-802E-6480ED1B9387}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CABF63DB-1DF4-43C1-802E-6480ED1B9387}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF7ED1C0-4818-428C-AA54-6B084D28BE4E}
+	EndGlobalSection
+EndGlobal
