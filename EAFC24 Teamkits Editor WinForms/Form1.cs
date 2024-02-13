@@ -165,9 +165,46 @@ namespace EAFC24_Teamkits_Editor_WinForms
             #endregion
 
 
+            #region shortnumberdetails
+            
+            textBox28.Text=jersey.shortsnumberfonttype.ToString();
+            Color numberback1 = Color.FromArgb(jersey.shortsnumbercolorprimr, jersey.shortsnumbercolorprimg, jersey.shortsnumbercolorprimb);
+            Color numberback2 = Color.FromArgb(jersey.shortsnumbercolorsecr, jersey.shortsnumbercolorsecg, jersey.shortsnumbercolorsecb);
+            Color numberback3 = Color.FromArgb(jersey.shortsnumbercolorterr, jersey.shortsnumbercolorterg, jersey.shortsnumbercolorterb);
+            textBox27.Text = ColorTranslator.ToHtml(numberback1);
+            textBox25.Text = ColorTranslator.ToHtml(numberback3);
+            textBox24.Text = ColorTranslator.ToHtml(jerseyback3);
+            button11.BackColor = numberback1;
+            button10.BackColor = numberback2;
+            button9.BackColor = numberback3;
+
+            textBox26.Text = jersey.shortsnumberplacementcode.ToString();
+
+            #endregion
+
+            #region others
+
+            textBox40.Text=jersey.armbandtype.ToString();
+            textBox39.Text=jersey.chestbadge.ToString();
+            textBox38.Text=jersey.dlc.ToString();
+            textBox37.Text=jersey.hasadvertisingkit.ToString();
+            textBox36.Text=jersey.isembargoed.ToString();
+            textBox35.Text=jersey.isinheritbasedetailmap.ToString();
+            textBox34.Text=jersey.islocked.ToString();
+            textBox33.Text=jersey.jerseyfit.ToString();
+            textBox32.Text=jersey.jerseyrenderingdetailmaptype.ToString();
+            textBox31.Text=jersey.jerseyrestriction.ToString();
+            textBox30.Text=jersey.powid.ToString();
+            textBox29.Text=jersey.renderingmaterialtype.ToString();
+            textBox41.Text=jersey.shortsrenderingdetailmaptype.ToString();
+            textBox42.Text=jersey.teamkitid.ToString();
+            textBox43.Text=jersey.teamkittypetechid.ToString();
+            textBox44.Text=jersey.teamtechid.ToString();
+            textBox45.Text=jersey.year.ToString();
 
 
 
+            #endregion
 
         }
     }
