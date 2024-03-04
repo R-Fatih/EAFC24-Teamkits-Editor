@@ -70,6 +70,15 @@ namespace EAFC24_Teamkits_Editor_WinForms {
         }
         
         /// <summary>
+        ///    benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string Başarıyla_kaydedildi_ {
+            get {
+                return ResourceManager.GetString("Başarıyla kaydedildi.", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   captainarmband benzeri yerelleştirilmiş bir dize arar.
         /// </summary>
         internal static string captainarmband {
@@ -124,11 +133,29 @@ namespace EAFC24_Teamkits_Editor_WinForms {
         }
         
         /// <summary>
+        ///    benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string Duplicate {
+            get {
+                return ResourceManager.GetString("Duplicate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   hasadvertisingkit benzeri yerelleştirilmiş bir dize arar.
         /// </summary>
         internal static string hasadvertisingkit {
             get {
                 return ResourceManager.GetString("hasadvertisingkit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string Hata {
+            get {
+                return ResourceManager.GetString("Hata", resourceCulture);
             }
         }
         
@@ -376,11 +403,83 @@ namespace EAFC24_Teamkits_Editor_WinForms {
         }
         
         /// <summary>
+        ///   Kit details benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string Kit_details {
+            get {
+                return ResourceManager.GetString("Kit details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Kit name benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string Kit_name {
+            get {
+                return ResourceManager.GetString("Kit name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Kit number benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string Kit_number {
+            get {
+                return ResourceManager.GetString("Kit number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string Lütfen_dosya_seçin {
+            get {
+                return ResourceManager.GetString("Lütfen dosya seçin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string Lütfen_isim_girin {
+            get {
+                return ResourceManager.GetString("Lütfen isim girin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string Lütfen_teamkits_dosyası_açın {
+            get {
+                return ResourceManager.GetString("Lütfen teamkits dosyası açın", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   numberfonttype benzeri yerelleştirilmiş bir dize arar.
         /// </summary>
         internal static string numberfonttype {
             get {
                 return ResourceManager.GetString("numberfonttype", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string Open {
+            get {
+                return ResourceManager.GetString("Open", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Other benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string Other {
+            get {
+                return ResourceManager.GetString("Other", resourceCulture);
             }
         }
         
@@ -399,6 +498,24 @@ namespace EAFC24_Teamkits_Editor_WinForms {
         internal static string renderingmaterialtype {
             get {
                 return ResourceManager.GetString("renderingmaterialtype", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Shorts number benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string Shorts_number {
+            get {
+                return ResourceManager.GetString("Shorts number", resourceCulture);
             }
         }
         
@@ -651,6 +768,15 @@ namespace EAFC24_Teamkits_Editor_WinForms {
         internal static string teamtechid {
             get {
                 return ResourceManager.GetString("teamtechid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
             }
         }
         

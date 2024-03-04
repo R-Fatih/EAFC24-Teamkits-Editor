@@ -93,6 +93,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Localization.tr.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -124,6 +125,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Locals\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\iconabv.png" />
+    <None Include="Resources\25231.png" />
+    <None Include="Resources\buy-me-a-coffee-logo-F1878A1EB2-seeklogo.com.png" />
+    <None Include="Resources\twitter-x-logo-0339F999CF-seeklogo.com.png" />
+    <None Include="Resources\X_logo_2023_%28white%29.png" />
+    <None Include="Resources\7b545748e8773386e5f7d66e7ce79782.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

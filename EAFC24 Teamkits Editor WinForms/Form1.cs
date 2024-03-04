@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
@@ -121,7 +122,7 @@ namespace EAFC24_Teamkits_Editor_WinForms
                 isfileopened = true;
             }
             else
-                MessageBox.Show("Lütfen dosya seçin", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Localization.Lütfen_dosya_seçin, Localization.Hata, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -309,7 +310,7 @@ namespace EAFC24_Teamkits_Editor_WinForms
                 ShowKitOfTeams();
             }
             else
-                MessageBox.Show("Lütfen teamkits dosyası açın", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Localization.Lütfen_teamkits_dosyası_açın, Localization.Hata, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
 
@@ -341,14 +342,14 @@ namespace EAFC24_Teamkits_Editor_WinForms
                 if (result == DialogResult.OK)
                 {
                     File.WriteAllText(saveFileDialog1.FileName, tsvString, Encoding.Unicode);
-
+                    MessageBox.Show(Localization.Başarıyla_kaydedildi_);
                 }
                 else
-                    MessageBox.Show("Lütfen isim girin", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(Localization.Lütfen_isim_girin, Localization.Hata, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
             }else
-                MessageBox.Show("Lütfen teamkits dosyası açın", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Localization.Lütfen_teamkits_dosyası_açın, Localization.Hata, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -680,6 +681,7 @@ namespace EAFC24_Teamkits_Editor_WinForms
             Jersey jersey = JerseyHelpers.FinJerseyBy(list, (Jersey)listBox2.SelectedItem);
             jersey.teamkittypetechid = Convert.ToInt32(textBox43.Text);
 
+
         }
 
         private void textBox44_TextChanged(object sender, EventArgs e)
@@ -750,6 +752,40 @@ namespace EAFC24_Teamkits_Editor_WinForms
             label14.Text = Localization.Color_2_;
             label16.Text = Localization.Color_3_;
             label13.Text = Localization.jerseyfrontnumberplacementcode;
+            label27.Text = Localization.shortsnumberfonttype;
+            label26.Text = Localization.Color_1_;
+            label23.Text = Localization.Color_2_;
+            label20.Text = Localization.Color_3_;
+            label25.Text = Localization.jerseybacknameplacementcode;
+            label39.Text = Localization.armbandtype;
+            label38.Text = Localization.chestbadge;
+            label37.Text = Localization.dlc;
+           
+            label35.Text = Localization.isembargoed;
+            label36.Text = Localization.hasadvertisingkit;
+            label34.Text = Localization.isinheritbasedetailmap;
+            label33.Text = Localization.islocked;
+            label32.Text = Localization.jerseyfit;
+            label31.Text = Localization.jerseyrenderingdetailmaptype;
+            label30.Text = Localization.jerseyrestriction;
+            label29.Text = Localization.powid;
+            label28.Text = Localization.renderingmaterialtype;
+            label40.Text = Localization.shortsrenderingdetailmaptype;
+            label41.Text = Localization.teamkitid;
+            label42.Text = Localization.teamkittypetechid;
+            label43.Text = Localization.teamtechid;
+            label44.Text = Localization.year;
+
+            groupBox1.Text = Localization.Kit_details;
+            groupBox2.Text = Localization.Kit_name;
+            groupBox3.Text = Localization.Kit_number;
+            groupBox4.Text = Localization.Shorts_number;
+            groupBox5.Text = Localization.Other;
+
+            button1.Text = Localization.Open;
+            button14.Text = Localization.Save;
+            button12.Text = Localization.Duplicate;
+            this.Text = Localization.Title;
 
         }
         private void Form1_Load(object sender, EventArgs e)
@@ -789,6 +825,41 @@ namespace EAFC24_Teamkits_Editor_WinForms
             Apply();
           
 
+
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+            Localization.Culture = CultureInfo.GetCultureInfo(Properties.Settings.Default["lang"].ToString());
+            Apply();
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://mellivoranetwork.com");
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://formamerkez.blogspot.com");
+
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://twitter.com/kitmaker_Fatih");
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://buymeacoffee.com/kitmakerfatih");
+
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/R-Fatih/EAFC24-Teamkits-Editor");
 
         }
     }

@@ -118,13 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="armbandtype" xml:space="preserve">
-    <value>типбандажа</value>
+    <value>Pazubant stili</value>
+  </data>
+  <data name="Başarıyla kaydedildi." xml:space="preserve">
+    <value>Başarıyla kaydedildi</value>
   </data>
   <data name="captainarmband" xml:space="preserve">
     <value>Pazubant</value>
   </data>
   <data name="chestbadge" xml:space="preserve">
-    <value>значокнагруди</value>
+    <value>Göğüs logo</value>
   </data>
   <data name="Color(1)" xml:space="preserve">
     <value>Renk(1)</value>
@@ -136,19 +139,25 @@
     <value>Renk(3)</value>
   </data>
   <data name="dlc" xml:space="preserve">
-    <value>дополнение</value>
+    <value>Dlc</value>
+  </data>
+  <data name="Duplicate" xml:space="preserve">
+    <value>Kopyala</value>
   </data>
   <data name="hasadvertisingkit" xml:space="preserve">
-    <value>имеетрекламныйкомплект</value>
+    <value>Yasaklı reklam</value>
+  </data>
+  <data name="Hata" xml:space="preserve">
+    <value>Hata</value>
   </data>
   <data name="isembargoed" xml:space="preserve">
-    <value>запрещено</value>
+    <value>Yasaklı</value>
   </data>
   <data name="isinheritbasedetailmap" xml:space="preserve">
-    <value>унаследованакартадеталейосновы</value>
+    <value>Miras detay haritası</value>
   </data>
   <data name="islocked" xml:space="preserve">
-    <value>заблокирован</value>
+    <value>Kilitli</value>
   </data>
   <data name="jerseybacknamefontcase" xml:space="preserve">
     <value>Yazı tipi durumu</value>
@@ -160,7 +169,7 @@
     <value>Yaka</value>
   </data>
   <data name="jerseyfit" xml:space="preserve">
-    <value>подходитфутболка</value>
+    <value>Fitlik</value>
   </data>
   <data name="jerseyfrontnumberplacementcode" xml:space="preserve">
     <value>Göğüs rakamı</value>
@@ -211,10 +220,10 @@
     <value>терциарныйцветномерrфутболки</value>
   </data>
   <data name="jerseyrenderingdetailmaptype" xml:space="preserve">
-    <value>типкартыдеталейрендерингафутболки</value>
+    <value>jerseyrenderingdetailmaptype</value>
   </data>
   <data name="jerseyrestriction" xml:space="preserve">
-    <value>ограничениеназначенияфутболки</value>
+    <value>Kısıtlama</value>
   </data>
   <data name="jerseyrightsleevebadge" xml:space="preserve">
     <value>Sağ Kol Logo</value>
@@ -222,14 +231,44 @@
   <data name="jerseyshapestyle" xml:space="preserve">
     <value>Kalıp tarzı</value>
   </data>
+  <data name="Kit details" xml:space="preserve">
+    <value>Forma detayları</value>
+  </data>
+  <data name="Kit name" xml:space="preserve">
+    <value>Forma isim</value>
+  </data>
+  <data name="Kit number" xml:space="preserve">
+    <value>Forma numara</value>
+  </data>
+  <data name="Lütfen dosya seçin" xml:space="preserve">
+    <value>Lütfen dosya seçin</value>
+  </data>
+  <data name="Lütfen isim girin" xml:space="preserve">
+    <value>Lütfen isim girin</value>
+  </data>
+  <data name="Lütfen teamkits dosyası açın" xml:space="preserve">
+    <value>Lütfen teamkits dosyası açın</value>
+  </data>
   <data name="numberfonttype" xml:space="preserve">
     <value>Font</value>
   </data>
+  <data name="Open" xml:space="preserve">
+    <value>Aç</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Diğer</value>
+  </data>
   <data name="powid" xml:space="preserve">
-    <value>идентификаторPOW</value>
+    <value>powid</value>
   </data>
   <data name="renderingmaterialtype" xml:space="preserve">
-    <value>типматериалаотображения</value>
+    <value>renderingmaterialtype</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Kaydet</value>
+  </data>
+  <data name="Shorts number" xml:space="preserve">
+    <value>Şort numara</value>
   </data>
   <data name="shortsnumbercolorprimb" xml:space="preserve">
     <value>основнойцветномерbшорт</value>
@@ -265,7 +304,7 @@
     <value>кодместоположенияномерашорт</value>
   </data>
   <data name="shortsrenderingdetailmaptype" xml:space="preserve">
-    <value>типкартыдеталейотображенияшорт</value>
+    <value>shortsrenderingdetailmaptype</value>
   </data>
   <data name="shortstyle" xml:space="preserve">
     <value>Şort stili</value>
@@ -307,15 +346,18 @@
     <value>терциарныйцветкомандыr</value>
   </data>
   <data name="teamkitid" xml:space="preserve">
-    <value>идентификаторкомплектакоманды</value>
+    <value>Forma İd</value>
   </data>
   <data name="teamkittypetechid" xml:space="preserve">
-    <value>идентификатортехкомплектакоманды</value>
+    <value>Forma türü</value>
   </data>
   <data name="teamtechid" xml:space="preserve">
-    <value>идентификатортехкоманды</value>
+    <value>Takım İd</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>EAFC24 Teamkits Editor</value>
   </data>
   <data name="year" xml:space="preserve">
-    <value>год</value>
+    <value>Yıl</value>
   </data>
 </root>
