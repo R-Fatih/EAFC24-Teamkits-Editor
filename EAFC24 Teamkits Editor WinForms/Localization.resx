@@ -249,6 +249,9 @@
   <data name="Lütfen teamkits dosyası açın" xml:space="preserve">
     <value />
   </data>
+  <data name="newteam" xml:space="preserve">
+    <value>newteam</value>
+  </data>
   <data name="numberfonttype" xml:space="preserve">
     <value>numberfonttype</value>
   </data>
@@ -309,6 +312,9 @@
   <data name="shortstyle" xml:space="preserve">
     <value>shortstyle</value>
   </data>
+  <data name="teamadded" xml:space="preserve">
+    <value>teamadded</value>
+  </data>
   <data name="teamcolorprimb" xml:space="preserve">
     <value>teamcolorprimb</value>
   </data>
@@ -344,6 +350,9 @@
   </data>
   <data name="teamcolortertr" xml:space="preserve">
     <value>teamcolortertr</value>
+  </data>
+  <data name="teamexist" xml:space="preserve">
+    <value>teamexist</value>
   </data>
   <data name="teamkitid" xml:space="preserve">
     <value>teamkitid</value>

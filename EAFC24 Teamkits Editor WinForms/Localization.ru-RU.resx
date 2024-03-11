@@ -249,6 +249,9 @@
   <data name="Lütfen teamkits dosyası açın" xml:space="preserve">
     <value>Пожалуйста, откройте файл TeamKits</value>
   </data>
+  <data name="newteam" xml:space="preserve">
+    <value>новая команда</value>
+  </data>
   <data name="numberfonttype" xml:space="preserve">
     <value>Шрифт</value>
   </data>
@@ -309,6 +312,9 @@
   <data name="shortstyle" xml:space="preserve">
     <value>Стиль Шорт</value>
   </data>
+  <data name="teamadded" xml:space="preserve">
+    <value>Новая команда успешно добавлена</value>
+  </data>
   <data name="teamcolorprimb" xml:space="preserve">
     <value>основнойцветкомандыb</value>
   </data>
@@ -344,6 +350,9 @@
   </data>
   <data name="teamcolortertr" xml:space="preserve">
     <value>терциарныйцветкомандыr</value>
+  </data>
+  <data name="teamexist" xml:space="preserve">
+    <value>Эта команда уже существует</value>
   </data>
   <data name="teamkitid" xml:space="preserve">
     <value>идентификатор формы команды</value>

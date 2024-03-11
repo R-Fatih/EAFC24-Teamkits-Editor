@@ -457,6 +457,15 @@ namespace EAFC24_Teamkits_Editor_WinForms {
         }
         
         /// <summary>
+        ///   newteam benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string newteam {
+            get {
+                return ResourceManager.GetString("newteam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   numberfonttype benzeri yerelleştirilmiş bir dize arar.
         /// </summary>
         internal static string numberfonttype {
@@ -637,6 +646,15 @@ namespace EAFC24_Teamkits_Editor_WinForms {
         }
         
         /// <summary>
+        ///   teamadded benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string teamadded {
+            get {
+                return ResourceManager.GetString("teamadded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   teamcolorprimb benzeri yerelleştirilmiş bir dize arar.
         /// </summary>
         internal static string teamcolorprimb {
@@ -741,6 +759,15 @@ namespace EAFC24_Teamkits_Editor_WinForms {
         internal static string teamcolortertr {
             get {
                 return ResourceManager.GetString("teamcolortertr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   teamexist benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string teamexist {
+            get {
+                return ResourceManager.GetString("teamexist", resourceCulture);
             }
         }
         

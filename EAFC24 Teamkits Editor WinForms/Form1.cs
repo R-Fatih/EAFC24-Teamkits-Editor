@@ -18,6 +18,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
+using System.Windows.Shapes;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using MessageBox = System.Windows.Forms.MessageBox;
@@ -775,6 +776,7 @@ namespace EAFC24_Teamkits_Editor_WinForms
             label42.Text = Localization.teamkittypetechid;
             label43.Text = Localization.teamtechid;
             label44.Text = Localization.year;
+            button20.Text = Localization.newteam;
 
             groupBox1.Text = Localization.Kit_details;
             groupBox2.Text = Localization.Kit_name;
@@ -853,6 +855,7 @@ namespace EAFC24_Teamkits_Editor_WinForms
 
         private void button17_Click(object sender, EventArgs e)
         {
+            
             Process.Start("https://buymeacoffee.com/kitmakerfatih");
 
         }
@@ -862,5 +865,221 @@ namespace EAFC24_Teamkits_Editor_WinForms
             Process.Start("https://github.com/R-Fatih/EAFC24-Teamkits-Editor");
 
         }
-    }
+
+		private void button20_Click(object sender, EventArgs e)
+		{
+            if (list.Where(x => x.teamtechid == Convert.ToInt32(textBox46.Text)).ToList().Count == 0)
+            {
+
+                list.Add(new Jersey
+                {
+                    chestbadge = 0,
+                    shortsnumberplacementcode = 1,
+                    shortsnumbercolorprimg = 12,
+                    teamcolorsecb = 44,
+                    shortsrenderingdetailmaptype = 0,
+                    jerseyfrontnumberplacementcode = 0,
+                    jerseynumbercolorsecr = 12,
+                    jerseynumbercolorprimr = 12,
+                    jerseynumbercolorprimg = 12,
+                    shortsnumbercolorsecb = 12,
+                    teamcolorprimg = 140,
+                    shortsnumbercolorterb = 12,
+                    shortsnumbercolorprimr = 12,
+                    teamcolortertb = 44,
+                    jerseynumbercolorterg = 12,
+                    shortsnumbercolorprimb = 12,
+                    jerseynamelayouttype = 0,
+                    jerseynumbercolorterr = 12,
+                    jerseyrightsleevebadge = 0,
+                    jerseynumbercolorprimb = 12,
+                    jerseyshapestyle = 0,
+                    jerseybacknameplacementcode = 1,
+                    teamcolorprimr = 237,
+                    jerseynamecolorg = 12,
+                    jerseyleftsleevebadge = 0,
+                    teamcolorsecg = 37,
+                    shortsnumbercolorsecg = 12,
+                    teamcolortertr = 142,
+                    jerseynumbercolorsecg = 12,
+                    renderingmaterialtype = 0,
+                    shortsnumbercolorterr = 12,
+                    teamcolorsecr = 142,
+                    jerseycollargeometrytype = 0,
+                    shortsnumbercolorterg = 12,
+                    jerseynamecolorr = 12,
+                    teamcolorprimb = 48,
+                    jerseyrenderingdetailmaptype = 0,
+                    jerseynumbercolorsecb = 12,
+                    jerseynamecolorb = 12,
+                    jerseynumbercolorterb = 12,
+                    teamcolortertg = 37,
+                    shortsnumbercolorsecr = 12,
+                    jerseybacknamefontcase = 0,
+                    teamkittypetechid = 0,
+                    powid = -1,
+                    isinheritbasedetailmap = 0,
+                    islocked = 0,
+                    numberfonttype = 1,
+                    jerseynamefonttype = 1,
+                    teamkitid = 800,
+                    teamcolorprimpercent = 57,
+                    teamcolorsecpercent = 40,
+                    year = 0,
+                    captainarmband = 76,
+                    teamtechid = Convert.ToInt32(textBox46.Text),
+                    isembargoed = 0,
+                    hasadvertisingkit = 0,
+                    dlc = 0,
+                    teamcolortertpercent = 98,
+                    armbandtype = 0,
+                    shortsnumberfonttype = 1,
+                    shortstyle = 0,
+                    jerseyfit = 0,
+                    jerseyrestriction = 0,
+
+                });
+                list.Add(new Jersey
+                {
+                    chestbadge = 0,
+                    shortsnumberplacementcode = 1,
+                    shortsnumbercolorprimg = 12,
+                    teamcolorsecb = 44,
+                    shortsrenderingdetailmaptype = 0,
+                    jerseyfrontnumberplacementcode = 0,
+                    jerseynumbercolorsecr = 12,
+                    jerseynumbercolorprimr = 12,
+                    jerseynumbercolorprimg = 12,
+                    shortsnumbercolorsecb = 12,
+                    teamcolorprimg = 140,
+                    shortsnumbercolorterb = 12,
+                    shortsnumbercolorprimr = 12,
+                    teamcolortertb = 44,
+                    jerseynumbercolorterg = 12,
+                    shortsnumbercolorprimb = 12,
+                    jerseynamelayouttype = 0,
+                    jerseynumbercolorterr = 12,
+                    jerseyrightsleevebadge = 0,
+                    jerseynumbercolorprimb = 12,
+                    jerseyshapestyle = 0,
+                    jerseybacknameplacementcode = 1,
+                    teamcolorprimr = 237,
+                    jerseynamecolorg = 12,
+                    jerseyleftsleevebadge = 0,
+                    teamcolorsecg = 37,
+                    shortsnumbercolorsecg = 12,
+                    teamcolortertr = 142,
+                    jerseynumbercolorsecg = 12,
+                    renderingmaterialtype = 0,
+                    shortsnumbercolorterr = 12,
+                    teamcolorsecr = 142,
+                    jerseycollargeometrytype = 0,
+                    shortsnumbercolorterg = 12,
+                    jerseynamecolorr = 12,
+                    teamcolorprimb = 48,
+                    jerseyrenderingdetailmaptype = 0,
+                    jerseynumbercolorsecb = 12,
+                    jerseynamecolorb = 12,
+                    jerseynumbercolorterb = 12,
+                    teamcolortertg = 37,
+                    shortsnumbercolorsecr = 12,
+                    jerseybacknamefontcase = 0,
+                    teamkittypetechid = 1,
+                    powid = -1,
+                    isinheritbasedetailmap = 0,
+                    islocked = 0,
+                    numberfonttype = 1,
+                    jerseynamefonttype = 1,
+                    teamkitid = 800,
+                    teamcolorprimpercent = 57,
+                    teamcolorsecpercent = 40,
+                    year = 0,
+                    captainarmband = 76,
+                    teamtechid = Convert.ToInt32(textBox46.Text),
+                    isembargoed = 0,
+                    hasadvertisingkit = 0,
+                    dlc = 0,
+                    teamcolortertpercent = 98,
+                    armbandtype = 0,
+                    shortsnumberfonttype = 1,
+                    shortstyle = 0,
+                    jerseyfit = 0,
+                    jerseyrestriction = 0,
+
+                });
+                list.Add(new Jersey
+                {
+                    chestbadge = 0,
+                    shortsnumberplacementcode = 1,
+                    shortsnumbercolorprimg = 12,
+                    teamcolorsecb = 44,
+                    shortsrenderingdetailmaptype = 0,
+                    jerseyfrontnumberplacementcode = 0,
+                    jerseynumbercolorsecr = 12,
+                    jerseynumbercolorprimr = 12,
+                    jerseynumbercolorprimg = 12,
+                    shortsnumbercolorsecb = 12,
+                    teamcolorprimg = 140,
+                    shortsnumbercolorterb = 12,
+                    shortsnumbercolorprimr = 12,
+                    teamcolortertb = 44,
+                    jerseynumbercolorterg = 12,
+                    shortsnumbercolorprimb = 12,
+                    jerseynamelayouttype = 0,
+                    jerseynumbercolorterr = 12,
+                    jerseyrightsleevebadge = 0,
+                    jerseynumbercolorprimb = 12,
+                    jerseyshapestyle = 0,
+                    jerseybacknameplacementcode = 1,
+                    teamcolorprimr = 237,
+                    jerseynamecolorg = 12,
+                    jerseyleftsleevebadge = 0,
+                    teamcolorsecg = 37,
+                    shortsnumbercolorsecg = 12,
+                    teamcolortertr = 142,
+                    jerseynumbercolorsecg = 12,
+                    renderingmaterialtype = 0,
+                    shortsnumbercolorterr = 12,
+                    teamcolorsecr = 142,
+                    jerseycollargeometrytype = 0,
+                    shortsnumbercolorterg = 12,
+                    jerseynamecolorr = 12,
+                    teamcolorprimb = 48,
+                    jerseyrenderingdetailmaptype = 0,
+                    jerseynumbercolorsecb = 12,
+                    jerseynamecolorb = 12,
+                    jerseynumbercolorterb = 12,
+                    teamcolortertg = 37,
+                    shortsnumbercolorsecr = 12,
+                    jerseybacknamefontcase = 0,
+                    teamkittypetechid = 2,
+                    powid = -1,
+                    isinheritbasedetailmap = 0,
+                    islocked = 0,
+                    numberfonttype = 1,
+                    jerseynamefonttype = 1,
+                    teamkitid = 800,
+                    teamcolorprimpercent = 57,
+                    teamcolorsecpercent = 40,
+                    year = 0,
+                    captainarmband = 76,
+                    teamtechid = Convert.ToInt32(textBox46.Text),
+                    isembargoed = 0,
+                    hasadvertisingkit = 0,
+                    dlc = 0,
+                    teamcolortertpercent = 98,
+                    armbandtype = 0,
+                    shortsnumberfonttype = 1,
+                    shortstyle = 0,
+                    jerseyfit = 0,
+                    jerseyrestriction = 0,
+
+                });
+				MessageBox.Show(Localization.teamadded);
+
+
+			}else
+                MessageBox.Show(Localization.teamexist);
+		}
+	}
 }

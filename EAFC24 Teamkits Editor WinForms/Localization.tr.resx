@@ -249,6 +249,9 @@
   <data name="Lütfen teamkits dosyası açın" xml:space="preserve">
     <value>Lütfen teamkits dosyası açın</value>
   </data>
+  <data name="newteam" xml:space="preserve">
+    <value>Yeni takım</value>
+  </data>
   <data name="numberfonttype" xml:space="preserve">
     <value>Font</value>
   </data>
@@ -309,6 +312,9 @@
   <data name="shortstyle" xml:space="preserve">
     <value>Şort stili</value>
   </data>
+  <data name="teamadded" xml:space="preserve">
+    <value>Yeni takım başarıyla eklendi</value>
+  </data>
   <data name="teamcolorprimb" xml:space="preserve">
     <value>основнойцветкомандыb</value>
   </data>
@@ -344,6 +350,9 @@
   </data>
   <data name="teamcolortertr" xml:space="preserve">
     <value>терциарныйцветкомандыr</value>
+  </data>
+  <data name="teamexist" xml:space="preserve">
+    <value>Bu takım zaten var</value>
   </data>
   <data name="teamkitid" xml:space="preserve">
     <value>Forma İd</value>
