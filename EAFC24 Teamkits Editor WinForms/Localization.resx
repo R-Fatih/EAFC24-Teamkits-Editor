@@ -144,10 +144,16 @@
   <data name="Duplicate" xml:space="preserve">
     <value />
   </data>
+  <data name="exportkit" xml:space="preserve">
+    <value />
+  </data>
   <data name="hasadvertisingkit" xml:space="preserve">
     <value>hasadvertisingkit</value>
   </data>
   <data name="Hata" xml:space="preserve">
+    <value />
+  </data>
+  <data name="importkit" xml:space="preserve">
     <value />
   </data>
   <data name="isembargoed" xml:space="preserve">

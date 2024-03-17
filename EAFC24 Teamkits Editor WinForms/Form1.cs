@@ -349,7 +349,8 @@ namespace EAFC24_Teamkits_Editor_WinForms
                     MessageBox.Show(Localization.Lütfen_isim_girin, Localization.Hata, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
-            }else
+            }
+            else
                 MessageBox.Show(Localization.Lütfen_teamkits_dosyası_açın, Localization.Hata, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
@@ -734,7 +735,7 @@ namespace EAFC24_Teamkits_Editor_WinForms
             label1.Text = Localization.jerseycollargeometrytype;
             label2.Text = Localization.captainarmband;
             label3.Text = Localization.Color_1_;
-            label4.Text = Localization.Color_1_+"%";
+            label4.Text = Localization.Color_1_ + "%";
             label6.Text = Localization.Color_2_;
             label5.Text = Localization.Color_2_ + "%";
             label8.Text = Localization.Color_3_;
@@ -761,7 +762,7 @@ namespace EAFC24_Teamkits_Editor_WinForms
             label39.Text = Localization.armbandtype;
             label38.Text = Localization.chestbadge;
             label37.Text = Localization.dlc;
-           
+
             label35.Text = Localization.isembargoed;
             label36.Text = Localization.hasadvertisingkit;
             label34.Text = Localization.isinheritbasedetailmap;
@@ -787,6 +788,9 @@ namespace EAFC24_Teamkits_Editor_WinForms
             button1.Text = Localization.Open;
             button14.Text = Localization.Save;
             button12.Text = Localization.Duplicate;
+            button21.Text = Localization.exportkit;
+            button22.Text = Localization.importkit;
+
             this.Text = Localization.Title;
 
         }
@@ -798,9 +802,9 @@ namespace EAFC24_Teamkits_Editor_WinForms
 
         private void button13_Click_1(object sender, EventArgs e)
         {
-           
 
-            
+
+
 
         }
 
@@ -813,19 +817,19 @@ namespace EAFC24_Teamkits_Editor_WinForms
                     Properties.Settings.Default["lang"] = "tr";
                     Properties.Settings.Default.Save();
                     break;
-                    case 1:
+                case 1:
                     Localization.Culture = CultureInfo.GetCultureInfo("en-US");
                     Properties.Settings.Default["lang"] = "en-US";
                     Properties.Settings.Default.Save();
                     break;
-                    case 2:
+                case 2:
                     Localization.Culture = CultureInfo.GetCultureInfo("ru-RU");
                     Properties.Settings.Default["lang"] = "ru-RU";
                     Properties.Settings.Default.Save();
                     break;
             }
             Apply();
-          
+
 
 
         }
@@ -855,7 +859,7 @@ namespace EAFC24_Teamkits_Editor_WinForms
 
         private void button17_Click(object sender, EventArgs e)
         {
-            
+
             Process.Start("https://buymeacoffee.com/kitmakerfatih");
 
         }
@@ -866,8 +870,8 @@ namespace EAFC24_Teamkits_Editor_WinForms
 
         }
 
-		private void button20_Click(object sender, EventArgs e)
-		{
+        private void button20_Click(object sender, EventArgs e)
+        {
             if (list.Where(x => x.teamtechid == Convert.ToInt32(textBox46.Text)).ToList().Count == 0)
             {
 
@@ -1075,11 +1079,98 @@ namespace EAFC24_Teamkits_Editor_WinForms
                     jerseyrestriction = 0,
 
                 });
-				MessageBox.Show(Localization.teamadded);
+                MessageBox.Show(Localization.teamadded);
 
 
-			}else
+            }
+            else
                 MessageBox.Show(Localization.teamexist);
-		}
-	}
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            if (listBox2.SelectedItem != null)
+            {
+
+                Jersey jersey = (Jersey)listBox2.SelectedItem;
+
+                File.WriteAllText(listBox1.SelectedItem.ToString() + "," + jersey.teamkittypetechid + ".json", new
+                {
+                    armbandtype = jersey.armbandtype,
+                    captainarmband = jersey.captainarmband,
+                    chestbadge = jersey.chestbadge,
+                    dlc = jersey.dlc,
+                    hasadvertisingkit = jersey.hasadvertisingkit,
+                    isembargoed = jersey.isembargoed,
+                    isinheritbasedetailmap = jersey.isinheritbasedetailmap,
+                    islocked = jersey.islocked,
+                    jerseybacknamefontcase = jersey.jerseybacknamefontcase,
+                    jerseybacknameplacementcode = jersey.jerseybacknameplacementcode,
+                    jerseycollargeometrytype = jersey.jerseycollargeometrytype,
+                    jerseyfit = jersey.jerseyfit,
+                    jerseyfrontnumberplacementcode = jersey.jerseyfrontnumberplacementcode,
+                    jerseyleftsleevebadge = jersey.jerseyleftsleevebadge,
+                    jerseynamecolorb = jersey.jerseynamecolorb,
+                    jerseynamecolorg = jersey.jerseynamecolorg,
+                    jerseynamecolorr = jersey.jerseynamecolorr,
+                    jerseynamefonttype = jersey.jerseynamefonttype,
+                    jerseynamelayouttype = jersey.jerseynamelayouttype,
+                    jerseynumbercolorprimb = jersey.jerseynumbercolorprimb,
+                    jerseynumbercolorprimg = jersey.jerseynumbercolorprimg,
+                    jerseynumbercolorprimr = jersey.jerseynumbercolorprimr,
+                    jerseynumbercolorsecb = jersey.jerseynumbercolorsecb,
+                    jerseynumbercolorsecg = jersey.jerseynumbercolorsecg,
+                    jerseynumbercolorsecr = jersey.jerseynumbercolorsecr,
+                    jerseynumbercolorterb = jersey.jerseynumbercolorterb,
+                    jerseynumbercolorterg = jersey.jerseynumbercolorterg,
+                    jerseynumbercolorterr = jersey.jerseynumbercolorterr,
+                    jerseyrenderingdetailmaptype = jersey.jerseyrenderingdetailmaptype,
+                    jerseyrestriction = jersey.jerseyrestriction,
+                    jerseyrightsleevebadge = jersey.jerseyrightsleevebadge,
+                    jerseyshapestyle = jersey.jerseyshapestyle,
+                    numberfonttype = jersey.numberfonttype,
+                    powid = jersey.powid,
+                    renderingmaterialtype = jersey.renderingmaterialtype,
+                    shortsnumbercolorprimb = jersey.shortsnumbercolorprimb,
+                    shortsnumbercolorprimg = jersey.shortsnumbercolorprimg,
+                    shortsnumbercolorprimr = jersey.shortsnumbercolorprimr,
+                    shortsnumbercolorsecb = jersey.shortsnumbercolorsecb,
+                    shortsnumbercolorsecg = jersey.shortsnumbercolorsecg,
+                    shortsnumbercolorsecr = jersey.shortsnumbercolorsecr,
+                    shortsnumbercolorterb = jersey.shortsnumbercolorterb,
+                    shortsnumbercolorterg = jersey.shortsnumbercolorterg,
+                    shortsnumbercolorterr = jersey.shortsnumbercolorterr,
+                    shortsnumberfonttype = jersey.shortsnumberfonttype,
+                    shortsnumberplacementcode = jersey.shortsnumberplacementcode,
+                    shortsrenderingdetailmaptype = jersey.shortsrenderingdetailmaptype,
+                    shortstyle = jersey.shortstyle,
+                    teamcolorprimb = jersey.teamcolorprimb,
+                    teamcolorprimg = jersey.teamcolorprimg,
+                    teamcolorprimpercent = jersey.teamcolorprimpercent,
+                    teamcolorprimr = jersey.teamcolorprimr,
+                    teamcolorsecb = jersey.teamcolorsecb,
+                    teamcolorsecg = jersey.teamcolorsecg,
+                    teamcolorsecpercent = jersey.teamcolorsecpercent,
+                    teamcolorsecr = jersey.teamcolorsecr,
+                    teamcolortertb = jersey.teamcolortertb,
+                    teamcolortertg = jersey.teamcolortertg,
+                    teamcolortertpercent = jersey.teamcolortertpercent,
+                    teamcolortertr = jersey.teamcolortertr,
+                    teamkitid = jersey.teamkitid,
+                    teamkittypetechid = jersey.teamkittypetechid,
+                    teamtechid = jersey.teamtechid,
+                    year = jersey.year
+                }.ToString());
+                MessageBox.Show(Localization.Başarıyla_kaydedildi_);
+            }
+            else
+                MessageBox.Show(Localization.Hata);
+
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

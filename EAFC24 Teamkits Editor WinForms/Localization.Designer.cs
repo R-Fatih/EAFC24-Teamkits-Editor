@@ -142,6 +142,15 @@ namespace EAFC24_Teamkits_Editor_WinForms {
         }
         
         /// <summary>
+        ///    benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string exportkit {
+            get {
+                return ResourceManager.GetString("exportkit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   hasadvertisingkit benzeri yerelleştirilmiş bir dize arar.
         /// </summary>
         internal static string hasadvertisingkit {
@@ -156,6 +165,15 @@ namespace EAFC24_Teamkits_Editor_WinForms {
         internal static string Hata {
             get {
                 return ResourceManager.GetString("Hata", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string importkit {
+            get {
+                return ResourceManager.GetString("importkit", resourceCulture);
             }
         }
         
